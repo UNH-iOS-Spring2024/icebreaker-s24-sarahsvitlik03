@@ -9,12 +9,14 @@ import SwiftUI
 import Firebase
 
 @main
-struct IceBreakerApp: App {
+struct Icebreaker_Pellicano_S24App: App {
     init(){
-   //     let providerFactor = AppCheckDebugProvider()
-     //   AppCheck.setAppCheckProviderFactory(providerFactor)
-       // FirebaseApp.configure()
+        let providerFactory = AppCheckDebugProviderFactory()
+        AppCheck.setAppCheckProviderFactory(providerFactory)
+        
+        FirebaseApp.configure()
     }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
